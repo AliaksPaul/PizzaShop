@@ -1,1 +1,1 @@
-add menu models
+Added templates folder and uploaded images for the menu
