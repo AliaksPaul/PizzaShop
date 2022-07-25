@@ -52,9 +52,12 @@
         <hr>
         <p><b><h5 style="margin-left:40px;">Deliver to</h5></b>
 <!--        Text field for address-->
+        <form action="" method="post">
+            {% csrf_token %}
         <div class="col-auto" style="margin-left:40px; margin-right:240px;">
         <input  type="text" id="address" class="form-control">
         </div></p>
+        </form>
         <hr>
         <table class="table">
 <!--            table of items-->
