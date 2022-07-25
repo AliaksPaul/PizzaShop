@@ -1,1 +1,1 @@
-add menu models
+added header, FAQ, Phone, footer blocks on main template
