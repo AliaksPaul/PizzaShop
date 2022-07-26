@@ -1,0 +1,126 @@
+p{
+    font-size: 16px;
+    width:  920px;
+    height: 8px;
+    
+}
+.band{
+    width: 415px;
+}
+
+body { 
+    text-align: center;
+    
+}
+
+.input{
+    font-size:13px;
+    width:  400px;
+    background-position: 4px; /*Позиционируем*/   
+    outline: none; /*убираем стандартную обводку браузера*/   
+    -webkit-border-radius: 5px; /*закругляем углы для Chrome, Safari*/   
+    border-radius: 5px; /*закругляем углы для остальных браузеров*/  
+    padding-left: 20px; /*отступ слева от ввода, чтобы текст не был на картинке(выбирать по размеру картинки)*/  
+    height: 20px; /*высота строки ввода*/   
+    
+}
+
+.city{
+    font-size:17px;
+    width:  200px;
+    float: 50px;    
+}
+
+.pin{
+    width:  805px;
+}
+
+.city input,select{
+    font-size:13px;
+    width:  200;
+    margin-left: 378px;
+    background-position: 4px;   
+    outline: none;   
+    -webkit-border-radius: 5px; 
+    border-radius: 5px; 
+    padding-left: 20px;  
+    height: 20px;  
+        
+}
+
+.city1{
+    width:  785px;
+    right: 50px;
+    
+}
+
+.state{
+    width:  785px;
+}
+
+.location {
+   text-align: left;
+   margin-left: 375px; 
+
+}
+
+.button {
+    width: 415px;
+    border: none;
+    outline: none;
+    display: inline-block;
+    text-align: center;
+    text-decoration: none;
+    cursor: pointer;
+    font-size: 10px;
+    font-family: Roboto, Verdana, Tahoma, sans;
+    padding: 6px 20px;
+    color: #fff;
+  }
+.button_brown{
+    width: 415px;
+    border: none;
+    outline: none;
+    display: inline-block;
+    text-align: center;
+    text-decoration: none;
+    cursor: pointer;
+    font-size: 15px;
+    font-family: Roboto, Verdana, Tahoma, sans;
+    padding: 6px 20px;
+    
+    color: #fff;
+}
+  
+.button.blue {
+    background: #449ee7;
+  }
+.button_brown{
+    background: rgb(160, 152, 143);
+}
+.button:hover {
+    box-shadow: 0 1px 3px rgba(0, 0, 0, 0.2);
+  }
+.button_brown{
+    box-shadow: 0 1px 3px rgba(0, 0, 0, 0.2);
+}
+.button:hover.blue {
+    background: #39a1f4;
+  }
+.button_brown:hover.brown{
+    background: rgb(136, 130, 127);
+}
+.button:active {
+    box-shadow: inset 0 1px 3px rgba(0, 0, 0, 0.2);
+    text-shadow: 0 1px 3px rgba(0, 0, 0, 0.2);
+  }
+.button_brown:active{
+    box-shadow: inset 0 1px 3px rgba(0, 0, 0, 0.2);
+    text-shadow: 0 1px 3px rgba(0, 0, 0, 0.2);
+}
+.button:active.blue {
+    background: #266d89;
+  }
+.button_brown:active{
+    background: rgb(155, 144, 128);
+}
