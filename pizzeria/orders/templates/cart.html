@@ -11,18 +11,18 @@
 <body>
 
 <center style="margin-top:20px; margin-bottom:20px;"><h4>My Cart</h4></center>
-<div class="row" style="margin-right: 540px; margin-left:140px;">
+<div class="container">
     <div class="shadow p-3 mb-5 bg-body rounded">
-        <p><h5 style="margin-left:40px;">Your Cart</h5></p>
-        <p><h6 style="margin-left:40px;">July 22, 2022, 3.59 a.m.</h6></p>
+        <p><h5>Your Cart</h5></p>
+        <p><h6>July 22, 2022, 3.59 a.m.</h6></p>
 <!--        <p><img src="https://thumbs.dreamstime.com/b/shop-cart-icon-buy-symbol-shopping-basket-sign-%C3%A2%E2%82%AC-stock-143519011.jpg" style="height: 120px; width:20%; display: block;" class="card-img-top" alt="..."></p>-->
-        <i class="fa fa-shopping-cart" style="font-size:48px;margin-left:30px;"></i>
+        <i class="fa fa-shopping-cart" style="font-size:48px;"></i>
         <hr>
-        <p><b><h5 style="margin-left:40px;">Deliver to</h5></b>
+        <p><b><h5>Deliver to</h5></b>
 <!--        Text field for address-->
         <form action="" method="post">
             {% csrf_token %}
-        <div class="col-auto" style="margin-left:40px; margin-right:240px;">
+        <div class="col-auto">
         <input  type="text" id="address" class="form-control">
         </div></p>
         <hr>
@@ -44,16 +44,18 @@
       <td>1</td>
       <td>$13.20</td>
 <!--        Ref for deleting items should be here-->
-      <td><a href="#"><i class="fa fa-trash-o" style="margin-left:15px;font-size:36px; color:red;"></i></a></td>
+      <td><a href="#"><i class="fa fa-trash-o" style="font-size:36px; color:red;"></i></a></td>
     </tr>
   </tbody>
 </table>
-        <hr>
+
         <b><h5>Total price: $13.20</h5></b>
 <!--        Ordering should be added here-->
         <a href="#" type="button" class="btn btn-dark">Place Order</a>
     </div>
 </form>
+    </div>
+
 </div>
 </body>
 </html>
