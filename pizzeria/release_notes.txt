@@ -1,1 +1,1 @@
-add menu models
+URL patterns for all applications have been added
