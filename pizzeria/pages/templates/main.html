@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>{% block title %}Pizzeria{% endblock %}</title>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.1.0/css/bootstrap.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.0/umd/popper.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.1.0/js/bootstrap.min.js"></script>
+    <script src="https://kit.fontawesome.com/cbbc2228ad.js" crossorigin="anonymous"></script>
+</head>
+<body>
+    <!--Main Navigation-->
+    <header>
+        <nav class="navbar navbar-expand-lg bg-light navbar-light border-bottom box-shadow fixed-top">
+          <a class="navbar-brand text-muted" href="#"><b>Pizzeria</b></a>
+          <button class="navbar-toggler navbar-dark bg-dark" type="button" data-toggle="collapse" data-target="#collapsibleNavbar">
+              <span class="navbar-toggler-icon"></span>
+          </button>
+          <div class="collapse navbar-collapse" id="collapsibleNavbar">
+              <ul class="navbar-nav mr-auto">
+                  <li class="nav-item">
+                      <a class="nav-link" href="#">Home</a>
+                  </li>
+                  <li class="nav-item">
+                      <a class="nav-link" href="#">Orders</a>
+                  </li>
+              </ul>
+                  <a href="#" role="button" class="btn font-weight-light text-muted">
+                    <i class="fa-solid fa-user"></i> SIGN UP</a>
+                  <a href="#" role="button" class="btn font-weight-light text-muted">
+                    <i class="fa-solid fa-right-to-bracket"></i> LOGIN</a>
+          </div>
+        </nav>
+    </header>
+    <!--Main Navigation-->
+
+    <!--Main Layout-->
+    <!-- Insert here Order Now button, Our Offerings and Our Menu -->
+    <!--Main Layout-->
+
+    <!-- FAQ section -->
+    <div class="bg-dark text-white" style="border:70px solid #343A40">
+        <div class="container">
+            <h3 class="text-center">FAQ</h3>
+            <div id="accordion">
+                <div class="card bg-dark border-dark">
+                    <div class="card-header border-dark bg-dark">
+                        <a class="card-link" data-toggle="collapse" href="#collapseOne">
+                            What's Regular Pizza?
+                        </a>
+                    </div>
+                    <div id="collapseOne" class="collapse show" data-parent="#accordion">
+                        <div class="card-body">
+                            <p>Our Regular Pizza is a thin-crust or Neapolitan pizza. They come in 2 sizes: small (12" in diameter) and large (16" in diameter). The small is suitable for 1 or 2 people while the large feeds 2 to 4 people.</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="card bg-dark border-dark">
+                    <div class="card-header border-dark bg-dark">
+                        <a class="collapsed card-link" data-toggle="collapse" href="#collapseTwo">
+                            What's Sicilian Pizza?
+                        </a>
+                    </div>
+                    <div id="collapseTwo" class="collapse" data-parent="#accordion">
+                        <div class="card-body">
+                            <p>Our Sicilian pizza is a deep-dish or thick-crust pizza. We sell them in a 9-slice or a 15-slice size.</p>
+                            <ul class="">
+                                <li>
+                                    The 9-slice size is 16" x 16" and will feed anywhere from 3 to 5 people.
+                                </li>
+                                <li>
+                                    The 15-slice size is 28" x 16", comes in 2 large pizza boxes and can feed 6 to 9 people.
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- FAQ section -->
+
+    <!-- Phone section -->
+    <span>
+        <h3 class="bg-primary text-white text-center" style="border:70px solid #007BFF">
+            <i class="fa-solid fa-phone"></i> Call us now at 617-876-4897
+        </h3>
+    </span>
+    <!-- Phone section -->
+
+    <!-- Footer -->
+    <footer class="footer" style="border:15px solid white">
+        <div class="container">
+            <a href="tel:617-876-4897" role="button" class="btn btn-outline-light text-muted float-right">
+                <i class="fa-solid fa-phone"></i>
+            </a>
+            <a href="mailto:pizzeria@gmail.com" role="button" class="btn btn-outline-light text-muted float-right">
+                <i class="fa-solid fa-envelope"></i>
+            </a>
+            <a href="https://twitter.com/Pizzeria" role="button" class="btn btn-outline-light text-muted float-right">
+                <i class="fa-brands fa-twitter"></i>
+            </a>
+            <a href="https://www.instagram.com/pizzeria/" role="button" class="btn btn-outline-light text-muted float-right">
+                <i class="fa-brands fa-instagram"></i>
+            </a>   
+            <p class="text-muted">
+                © 2022. All rights reserved by Pizzeria.
+            </p>
+        </div>
+    </footer>
+    <!-- Footer -->
+</body>
+</html>
