@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="ru">
+	<head>
+        <title>Add a new address</title>
+        <link rel="stylesheet" href="address.css">
+        <!-- CSS only -->
+        
+    </head>
+    <body>
+        <form-action="#" method="post">
+        <h1>Add a new address</h1>
+            <div>
+                <button  type="submit" class="button_brown">USE MY CURRENT LOCATION</button> 
+            </div>
+            <br>
+            <hr class="band">
+            <div>
+                <p class="pin">Pincode</p>
+                <input placeholder="Enter Pincode" class="input" type="tel" name="Pincode" value="">
+            </div>
+            <div>
+                <p class="str">House No., Building name</p>
+                <input placeholder="Enter House No, Building Name" class="input" type="text" name="House" value="">
+            </div>
+            <div>
+                <p class="str">Road Name, Area, Colony</p>
+                
+                <input placeholder="Enter Road Name, Area, Colony" class="input" type="text" name="House" value="">
+            </div>       
+            <div class="city">
+                <p class="city1">City</p>
+                <input placeholder="Enter City"   type="text"  name="City" value="">            
+                <p class="state">State</p>
+                <select name="state" class="city">
+                    <option value="Belarus">Belarus</option>
+                    <option value="Russia">Russia</option>
+                    <option value="Poland">Poland</option>
+                </select>
+            </div>
+            <br>
+            <hr class="band">
+            <div class="location">
+                <p>Address Type :</p>
+                <br>
+                <div>
+                    <input type="radio" name="Home" value="">Home Address
+                </div>
+                <div>
+                    <input type="radio" name="Work" value="">Work/Office Address
+                </div>
+                <div>
+                    <input type="radio" name="Other" value="">Other
+                </div>
+            <div>
+                <br>
+                <button  type="submit" class="button blue">Save</button>           
+            </div>
+        </form>    
+    </body>
+</html>

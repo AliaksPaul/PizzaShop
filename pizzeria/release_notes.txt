@@ -1,1 +1,1 @@
-URL patterns for all applications have been added
+address layout was added
