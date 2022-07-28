@@ -1,1 +1,1 @@
-registration.html was added
+Template for cart was added.(orders/templates/cart.html)
