@@ -1,1 +1,1 @@
-added header, FAQ, Phone, footer blocks on main template
+URL patterns for all applications have been added
