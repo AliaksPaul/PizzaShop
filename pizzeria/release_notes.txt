@@ -1,1 +1,1 @@
-Added templates folder and uploaded images for the menu
+added header, FAQ, Phone, footer blocks on main template
