@@ -1,1 +1,2 @@
-Template for cart was added.(orders/templates/orders/cart.html)
+
+Template for cart was added.(orders/templates/cart.html)
