@@ -1,1 +1,1 @@
- add order from for pizza
+Add custom user's model with correct fields.
