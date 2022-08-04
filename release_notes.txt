@@ -1,1 +1,1 @@
-add user registration form
+Add custom user's model with correct fields.
