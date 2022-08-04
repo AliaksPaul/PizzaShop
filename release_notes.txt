@@ -1,1 +1,1 @@
-fix layout registration according to task 97
+fixed layout registration according to task 97
