@@ -44,6 +44,7 @@ INSTALLED_APPS = [
     'orders',
     'pages',
     'rest_framework',
+    'api',
     
 ]
 
