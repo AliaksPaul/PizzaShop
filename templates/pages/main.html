@@ -5,10 +5,10 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>{% block title %}Pizzeria{% endblock %}</title>
-    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.1.0/css/bootstrap.min.css">
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.0/umd/popper.min.js"></script>
-    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.1.0/js/bootstrap.min.js"></script>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.1/dist/css/bootstrap.min.css">
+    <script src="https://cdn.jsdelivr.net/npm/jquery@3.6.0/dist/jquery.slim.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.1/dist/js/bootstrap.bundle.min.js"></script>
     <script src="https://kit.fontawesome.com/cbbc2228ad.js" crossorigin="anonymous"></script>
     <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.5/dist/umd/popper.min.js" integrity="sha384-Xe+8cL9oJa6tN/veChSP7q+mnSPaj5Bcu9mPX5F5xIGE0DVittaqT5lorf0EI7Vk" crossorigin="anonymous"></script>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0/dist/js/bootstrap.min.js" integrity="sha384-ODmDIVzN+pFdexxHEHFBQH3/9/vQ9uori45z4JjnFsRydbmQbmL5t1tQ0culUzyK" crossorigin="anonymous"></script>
@@ -43,9 +43,129 @@
           </div>
         </nav>
     </header>
-    <!--Main Navigation-->
+    <!--/.Main Navigation-->
 
     <!--Main Layout-->
+
+    <!-- Insert here Order Now section -->
+
+    <!-- Our Offerings section -->
+    <div class="container my-5">  
+      <hr class="my-5">
+
+      <!--Carousel Wrapper-->
+      <div id="multi-item-example" class="carousel slide carousel-multi-item" data-ride="carousel">
+    
+        <!--Controls-->
+        <div class="controls-top text-center">
+          <a class="btn-floating" href="#multi-item-example" data-slide="prev"><h1 class="fa-solid fa-circle-chevron-left"></h1></a>
+          <a class="btn-floating" href="#multi-item-example" data-slide="next"><h1 class="fa-solid fa-circle-chevron-right"></h1></a>
+        </div>
+
+        <!--/.Controls-->
+    
+        <!--Indicators-->
+        <ol class="carousel-indicators">
+          <li data-target="#multi-item-example" data-slide-to="0" class="active"></li>
+          <li data-target="#multi-item-example" data-slide-to="1"></li>
+          <li data-target="#multi-item-example" data-slide-to="2"></li>
+        </ol>
+        <!--/.Indicators-->
+    
+        <!--Slides-->
+        <div class="carousel-inner" role="listbox" style="height: 200px; width: 100%; display: block;">
+    
+          <!--First slide-->
+          <div class="carousel-item active">
+    
+            <div class="row">
+              <div class="col-md-4">
+                <div class="card mb-2">
+                  <img class="card-img-top" src="https://pizzitalia.herokuapp.com/static/images/carousel-sic_pizza.272c46412fe4.jpg" alt="Card image cap">
+                </div>
+              </div>
+    
+              <div class="col-md-4 clearfix d-none d-md-block">
+                <div class="card mb-2">
+                  <img class="card-img-top" src="https://pizzitalia.herokuapp.com/static/images/carousel-platter.a1fde548759a.jpg" alt="Card image cap">
+                </div>
+              </div>
+    
+              <div class="col-md-4 clearfix d-none d-md-block">
+                <div class="card mb-2">
+                  <img class="card-img-top" src="https://pizzitalia.herokuapp.com/static/images/carousel-reg_pizza.e2113afb7507.jpg" alt="Card image cap">
+                </div>
+              </div>
+            </div>
+    
+          </div>
+          <!--/.First slide-->
+    
+          <!--Second slide-->
+          <div class="carousel-item">
+    
+            <div class="row">
+              <div class="col-md-4">
+                <div class="card mb-2">
+                  <img class="card-img-top" src="https://pizzitalia.herokuapp.com/static/images/carousel-sub.0cc85172278d.jpg" alt="Card image cap">
+                </div>
+              </div>
+    
+              <div class="col-md-4 clearfix d-none d-md-block">
+                <div class="card mb-2">
+                  <img class="card-img-top" src="https://pizzitalia.herokuapp.com/static/images/carousel-salad.759d3d77169c.jpg" alt="Card image cap">
+                </div>
+              </div>
+    
+              <div class="col-md-4 clearfix d-none d-md-block">
+                <div class="card mb-2">
+                  <img class="card-img-top" src="https://pizzitalia.herokuapp.com/static/images/carousel-pasta.6a12b233e87f.jpg" alt="Card image cap">
+                </div>
+              </div>
+            </div>
+    
+          </div>
+          <!--/.Second slide-->
+    
+          <!--Third slide-->
+          <div class="carousel-item">
+    
+            <div class="row">
+              <div class="col-md-4">
+                <div class="card mb-2">
+                  <img class="card-img-top" src="https://mdbootstrap.com/img/Photos/Horizontal/Food/4-col/img%20(53).jpg" alt="Card image cap">
+                </div>
+              </div>
+    
+              <div class="col-md-4 clearfix d-none d-md-block">
+                <div class="card mb-2">
+                  <img class="card-img-top" src="https://mdbootstrap.com/img/Photos/Horizontal/Food/4-col/img%20(45).jpg" alt="Card image cap">
+                </div>
+              </div>
+    
+              <div class="col-md-4 clearfix d-none d-md-block">
+                <div class="card mb-2">
+                  <img class="card-img-top" src="https://mdbootstrap.com/img/Photos/Horizontal/Food/4-col/img%20(51).jpg" alt="Card image cap">
+                </div>
+              </div>
+            </div>
+    
+          </div>
+          <!--/.Third slide-->
+    
+        </div>
+        <!--/.Slides-->
+    
+      </div>
+      <!--/.Carousel Wrapper-->
+    
+    </div>
+    <!--/.Our Offerings section -->
+
+    <!-- Insert here Our Menu section -->
+
+    <!--/.Main Layout-->
+
     <!-- Insert here Order Now button, Our Offerings and Our Menu -->
     <!--Main Layout-->
 <div style="border:70px solid white">
@@ -67,7 +187,6 @@
         <h1>Regular Pizza</h1>
       </div>
         </div>
-
 
      <div class="carousel-item">
       <img style="margin-top:-250px;margin-bottom:-250px;" src="https://kartinkin.net/uploads/posts/2021-03/thumbs/1617186799_18-p-krasivaya-pitstsa-krasivo-21.jpg" class="d-block w-100" alt="...">
