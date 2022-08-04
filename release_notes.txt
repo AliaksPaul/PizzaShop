@@ -1,1 +1,1 @@
- added offerings slider
+Created a base.html template and added extends into all templates
