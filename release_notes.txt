@@ -1,1 +1,1 @@
-Add custom user's model with correct fields.
+ fixed layout registration according to task 97
