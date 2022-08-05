@@ -44,7 +44,7 @@ INSTALLED_APPS = [
     'menu',
     'orders',
     'pages',
-    'rest_framework',
+    # 'rest_framework',
     'api',
     
 ]
@@ -135,4 +135,4 @@ STATIC_ROOT = BASE_DIR / 'static'
 
 DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
 
-AUTH_USER_MODEL = 'users.CustomUser'
+AUTH_USER_MODEL = 'accounts.CustomUser'
