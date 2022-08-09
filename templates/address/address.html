@@ -3,56 +3,55 @@
 {% block content %}
 
 <div class="container">
-
-<form action="#" method="post">
-<h1>Add a new address</h1>
-    <div>
-        <button  type="submit" class="button_brown">USE MY CURRENT LOCATION</button> 
+    <div style="width: 415px; margin-left: 435px;">
+        <form action="#" method="post">
+            <h1 style="margin-top: 70px;" class="text-center"> Add a new address </h1>
+            <div >
+                <button style="width: 415px; font-size: 15px; border-radius: 5px;" type="submit" class="button btn-primary">USE MY CURRENT LOCATION</button> 
+            </div><br>            
+            <hr style=" border-width: 3px; color:red;">
+            <div>
+                <p style="margin-bottom: 0px;"><b>Pincode</b></p>
+                <input placeholder="Enter Pincode" class="input" type="tel" name="Pincode" value="" style="width: 415px; margin-bottom: 10px;border-radius: 5px; ">
+            </div>
+            <div>
+                <p style="margin-bottom: 0px;"><b>House No., Building name</b></p>
+                <input placeholder="Enter House No, Building Name" class="input" type="text" name="House" value="" style="width: 415px; margin-bottom: 10px; border-radius: 5px;">
+            </div>
+            <div>
+                <p style="margin-bottom: 0px;"><b>Road Name, Area, Colony</b></p>                
+                <input placeholder="Enter Road Name, Area, Colony" class="input" type="text" name="House" value="" style="width: 415px; margin-bottom: 10px; border-radius: 5px;">
+            </div>       
+            <div>
+                <p style="margin-bottom: 0px;"><b>City</b></p>
+                <input placeholder="Enter City"   type="text"  name="City" value="" style="width: 415px; margin-bottom: 10px; border-radius: 5px;">            
+                <p style="margin-bottom: 0px;"><b>State</b></p>
+                <select name="state">
+                    <option value="Belarus">Belarus</option>
+                    <option value="Russia">Russia</option>
+                    <option value="Poland">Poland</option>
+                </select>
+            </div>
+            <br>
+            <hr style=" border-width: 3px; color:red;">
+            <div>
+                <p><b>Address Type:</b></p>
+                <div>
+                    <input type="radio" name="Home" value="">Home Address
+                </div>
+                <div>
+                    <input type="radio" name="Work" value="">Work/Office Address
+                </div>
+                <div>
+                    <input type="radio" name="Other" value="">Other
+                </div>
+                <div>
+                <br>
+                <button  type="submit" class="button btn-primary" style="width: 415px; border-radius: 5px;">SAVE</button>           
+                </div>
+            </div>
+        </form> 
     </div>
-    <br>
-    <hr class="band">
-    <div>
-        <p class="pin">Pincode</p>
-        <input placeholder="Enter Pincode" class="input" type="tel" name="Pincode" value="">
-    </div>
-    <div>
-        <p class="str">House No., Building name</p>
-        <input placeholder="Enter House No, Building Name" class="input" type="text" name="House" value="">
-    </div>
-    <div>
-        <p class="str">Road Name, Area, Colony</p>
-        
-        <input placeholder="Enter Road Name, Area, Colony" class="input" type="text" name="House" value="">
-    </div>       
-    <div class="city">
-        <p class="city1">City</p>
-        <input placeholder="Enter City"   type="text"  name="City" value="">            
-        <p class="state">State</p>
-        <select name="state" class="city">
-            <option value="Belarus">Belarus</option>
-            <option value="Russia">Russia</option>
-            <option value="Poland">Poland</option>
-        </select>
-    </div>
-    <br>
-    <hr class="band">
-    <div class="location">
-        <p>Address Type :</p>
-        <br>
-        <div>
-            <input type="radio" name="Home" value="">Home Address
-        </div>
-        <div>
-            <input type="radio" name="Work" value="">Work/Office Address
-        </div>
-        <div>
-            <input type="radio" name="Other" value="">Other
-        </div>
-    <div>
-        <br>
-        <button  type="submit" class="button blue">Save</button>           
-    </div>
-</form> 
 </div>   
 
 {% endblock  %}
