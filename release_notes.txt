@@ -1,1 +1,1 @@
-created API application and menu model serializers
+Email-Layout has been fixed.

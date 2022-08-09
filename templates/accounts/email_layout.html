@@ -2,102 +2,55 @@
 
 {% block content %}
 
-<script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.5/dist/umd/popper.min.js" integrity="sha384-Xe+8cL9oJa6tN/veChSP7q+mnSPaj5Bcu9mPX5F5xIGE0DVittaqT5lorf0EI7Vk" crossorigin="anonymous"></script>
-<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0/dist/js/bootstrap.min.js" integrity="sha384-ODmDIVzN+pFdexxHEHFBQH3/9/vQ9uori45z4JjnFsRydbmQbmL5t1tQ0culUzyK" crossorigin="anonymous"></script>
-<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.0/css/all.css" integrity="sha384-lZN37f5QGtY3VHgisS14W3ExzMWZxybE1SJSEsQp9S+oqd12jhcu+A56Ebc1zFSJ" crossorigin="anonymous">
-<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
-
-<style>
-  
-  body {font-family: Arial, Helvetica, sans-serif;}
-  * {box-sizing: border-box;}
-
-  input {
-    height: 40px;
-    margin-top: 10px;
-    text-indent: 5px;
-  }
-
-  button {
-    margin-top: 10px;
-  }
-
-  i.fa {
-    width: 26px;
-    height: 40px;
-    line-height: 40px;
-    text-align: center;
-    margin-right: -26px;
-    position: relative;
-    z-index: 1;
-    float: left;
-  }
-
-  i.fa + input {
-    padding-left: 26px;
-  }
-
-</style>
-
-<div class="col-lg-7 mx-auto p-3 py-md-3">
-  <main>
-    <div class="py-3 text-center">
-      <h2>E-mail Addresses</h2>
-    </div>
-  </main>
-  <div class="container">
-    <p class="lead">The following e-mail addresses are associated with your account:</p>
-    <div class="row"> 
-        <div class="col-lg-9">
-          <p class="col-md-4 mb-3 text-muted">EMAIL</p>
-        </div>
-        <div class="col-lg-3">
-          <p class="text-muted">STATUS</p>
-        </div>
-     </div> 
-    <table class="table">
-      <tr>
-        <td>
-          <div class="row">
-            <div class="col-lg-9 form-check">
+<div class="container py-4 h-100" style="margin-top: 80px; width: 660px;">
+  <h2 class="text-center">E-mail Addresses</h2>
+  <p>
+  <p class="text-secondary">The following e-mail addresses are associated with your account:</p>
+  <form action="" method="post">
+    <table class="table table">
+      <thead>
+        <tr style="font-size: .875rem; font-weight: 400; color: #999; text-transform: uppercase;">
+          <td style="text-align:left">E-MAIL</td>
+          <td style="text-align:right">STATUS</td>
+        </tr>
+      </thead>
+      <tbody>
+        <!-- {% for email in user_emails %} для отображения всех имейлов данного пользователя, с опциями измениния -->
+        <tr>
+          <td style="text-align:left">
+            <div class="form-check">
               <input class="form-check-input" type="radio" name="flexRadioDefault" id="flexRadioDefault1">
               <label class="form-check-label" for="flexRadioDefault1">
                 lapin.kirill45@gmail.com (Primary)
+                <!-- {{ email.user.email }} -->
               </label>
             </div>
-            <div class="col-lg-3">Verified
-            </div>
-           </div>
-        </td>
-      </tr>
+          </td>
+          <td style="text-align:right">Verified
+            <!-- {{ email.user.email.status }} -->
+          </td>
+        </tr>
+        <!-- {% endfor %} -->
+      </tbody>
     </table>
-  <div class="row ">
-    <div class="col-xs-6 col-md-4 text-center"> 
-      <button type="button" class="knopka btn-primary">MAKE PRIMARY</button>
-    </div>
-    <div class="col-xs-6 col-md-4 text-center">
-      <button type="button" class="knopka btn-dark">RE-SEND VERIFIKATION</button>
-    </div>
-    <div class="col-xs-6 col-md-4 text-center">
-      <button type="button" class="knopka btn-danger">REMOVE</button>
-    </div>
-  </div>  
-  <div class="conteiner">
-    <div class="px-4 pt-3 my-4 text-center ">
-      <h4>Add E-mail Address</h4>
-    </div>
-    <div>
-       <form  style="max-width:1000px;margin:auto">
-          <label class="form-label" for="email">E-mail</label>
-             <div class="input-container">
-               <i class="fa bi bi-envelope"></i>
-               <input class="input-field form-control" type="text" placeholder="E-mail Address" name="email">
-            </div>
-           <button type="submit" class="btn btn-secondary" >ADD E-MAIL</button>
-      </form>
-    </div>
+  </form>
+  <div class="d-flex flex-row justify-content-around" role="group" aria-label="Basic example">
+    <button type="submit" class="btn btn-primary btn-sm ">MAKE PRIMARY</button>
+    <button type="submit" class="btn btn-dark btn-sm">RE-SEND VERIFIKATION</button>
+    <button type="submit" class="btn btn-danger btn-sm">REMOVE</button>
   </div>
-</div>
+  <div class="container" style="width: auto; margin-top: 80px">
+    <h4 class="text-center" style="margin-top: 60px">Add E-mail Address</h4>
+    <form action="" method="post">
+      <div class="form-group">
+        <label for="exampleInputEmail1">E-Mail</label>
+        <input type="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp"
+          placeholder="Enter E-Mail">
+        <p>
+      </div>
+      <button type="submit" class="btn btn-light btn-sm">ADD E-MAIL</button>
+    </form>
+  </div>
 </div>
 
 {% endblock %}
