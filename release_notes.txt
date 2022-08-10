@@ -1,1 +1,1 @@
-Email-Layout has been fixed.
+added Credit card information display and choosing a delivery address
