@@ -1,1 +1,1 @@
-Email-Layout has been fixed.
+Base template is fixed. Duplicated scripts and links have been removed.
