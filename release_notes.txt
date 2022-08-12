@@ -1,1 +1,1 @@
-Email-Layout has been fixed.
+Added navigation to all templates (Main, Profile, Login, Address, Shipping address, password reset) + registration/ and registration/email/
