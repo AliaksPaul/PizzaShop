@@ -1,1 +1,1 @@
-Email-Layout has been fixed.
+Fix cart template structure and syntax.
