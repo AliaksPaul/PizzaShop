@@ -1,1 +1,1 @@
-added 404 template
+corrected 404 error
