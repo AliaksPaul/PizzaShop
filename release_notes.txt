@@ -1,1 +1,1 @@
-Fix address layout
+Base template is fixed. Duplicated scripts and links have been removed.
