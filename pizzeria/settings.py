@@ -134,5 +134,8 @@ STATIC_ROOT = BASE_DIR / 'static'
 # https://docs.djangoproject.com/en/4.0/ref/settings/#default-auto-field
 
 DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
-
-AUTH_USER_MODEL = 'accounts.CustomUser'
+LOGIN_REDIRECT_URL = '/pages/'
+LOGOUT_REDIRECT_URL = '/pages/'
+EMAIL_BACKEND = 'django.core.mail.backends.console.EmailBackend'
+#
+# AUTH_USER_MODEL = 'accounts.CustomUser'
