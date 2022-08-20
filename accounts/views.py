@@ -2,8 +2,6 @@ from django.shortcuts import render
 from .forms import *
 from django.contrib.auth.models import User
 
-# Create your views here.
-
 
 def registration(request):
     """Function for registration"""
@@ -17,3 +15,7 @@ def registration(request):
         return render(request, 'account/registration.html', {'user_form': user_form})
     user_form = UserRegistrationForm()
     return render(request, 'account/registration.html', {'user_form': user_form})
+
+def email(request):
+    return render(request, 'accounts/email_layout.html')
+
