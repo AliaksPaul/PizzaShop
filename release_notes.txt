@@ -1,1 +1,1 @@
-Base template is fixed. Duplicated scripts and links have been removed.
+added Credit card information display and choosing a delivery address
