@@ -1,11 +1,10 @@
-from django.contrib.auth.models import CustomUser
+from django.contrib.auth.models import User
 from django import forms
 
 
 class UserRegistrationForm(forms.ModelForm):
     email = forms.CharField(label="Email", widget=forms.EmailInput)
-    first_name = forms.CharField(label="Enter your first name", widget=forms.TextInput)
-    last_name = forms.CharField(label="Enter your last name", widget=forms.TextInput)
+    username = forms.CharField(label="Enter your first name", widget=forms.TextInput)
     password = forms.CharField(label="Password:", widget=forms.PasswordInput)
     password2 = forms.CharField(label="Repeat your Password:", widget=forms.PasswordInput)
 

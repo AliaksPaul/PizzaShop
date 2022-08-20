@@ -52,9 +52,9 @@
             {% if user.is_authenticated %}
               <a href="#" role="button" class="btn font-weight-light text-muted">CART(0)</a>
             {% endif %}
-              <a href="#" role="button" class="btn font-weight-light text-muted">
+              <a href="{% url 'registration' %}" role="button" class="btn font-weight-light text-muted">
                 <i class="fa-solid fa-user"></i> SIGN UP</a>
-              <a href="#" role="button" class="btn font-weight-light text-muted">
+              <a href="{% url 'login' %}" role="button" class="btn font-weight-light text-muted">
                 <i class="fa-solid fa-right-to-bracket"></i> LOGIN</a>
       </div>
     </nav>
