@@ -1,3 +1,4 @@
+from django.conf.urls import handler404
 from django.contrib import admin
 from django.urls import path, include
 
@@ -12,3 +13,5 @@ urlpatterns = [
      path('pages/', include('pages.urls')),
      path('api/', include('api.urls')),
 ]
+
+handler404 = 'pages.views.error_404'

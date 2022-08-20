@@ -1,1 +1,1 @@
-added Credit card information display and choosing a delivery address
+corrected 404 error
