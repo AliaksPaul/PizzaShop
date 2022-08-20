@@ -1,1 +1,5 @@
-Email-Layout has been fixed.
+Login, registration, setting password and all the following templates were created. Also templates' code was updated.
+The main page was updated and now it is adaptive.
+I have created registration folder, besause it is necessary if we use django.contrib.urls (you can see that in pizzeria.urls). I also created
+another folder for registration, and we can use it for users' profiles. I also use base user model, because I could't use
+our custom model in practice

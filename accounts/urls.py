@@ -1,8 +1,8 @@
 from django.contrib import admin
 from django.urls import path, include
-from accounts import views
-
+from .views import *
 
 urlpatterns = [
+    path('registration/', registration, name='registration'),
     path('email/', views.email, name="email"),
 ]
