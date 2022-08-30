@@ -3,5 +3,6 @@ from . import views
 
 
 urlpatterns = [
-    path('', views.main, name='main'), 
+    # http://localhost:8000/pages/
+    path('', views.PizzaListView.as_view(), name='main'),
 ]
