@@ -1,77 +1,47 @@
-{% extends 'base.html' %}
-
+{% extends 'base.html' %} 
 {% block content %}
-
-<center style="margin-top:100px"><h2>My Cart</h2></center>
+<center style="margin-top:20px; margin-bottom:20px;">
+	<h4>My Cart</h4>
+</center>
 <div class="container">
-    <div class="shadow p-3 mb-5 bg-body rounded">
-        <div class="d-flex align-items-center">
-            <i class="fa fa-shopping-cart" style="font-size:48px;"></i>
-            <div class="container">
-                <h5><b>Your Cart</b></h5>
-                <h6>July 22, 2022, 3.59 a.m.</h6>
-            </div>
-        </div>
-        <hr>
-<!--        Text field for address-->
-        <form  action="" method="post">
-            {% csrf_token %}
-            <div class="form-group">
-                <label for="#"><h6><b>Deliver to:</b></h6></label>
-                <select class="uk-select" id="#" name="#" required> 
-                    <option value selected disabled hidden>Select Address</option>
-                    <optgroup label="Select Address">
-                        <option selected>Home (12, fewf, Warisaliganj 805130, BR)</option>
-                    </optgroup>
-                </select>
-            </div>        
-            <table class="table">
-<!--            table of items-->
-                <thead>
-                    <tr>
-                        <th scope="col">Item name</th>
-                        <th scope="col">Quantity</th>
-                        <th scope="col">Price</th>
-                        <th scope="col">Remove</th>
-                    </tr>
-                </thead>
-                <tbody>
-  <!--    cycle 'for' with items should be here-->
-                    <tr>
-                        <td>Small Regular pizza - 1 toppings - Anchovies</td>
-                        <td>1</td>
-                        <td>$13.20</td>
-<!--        Ref for deleting items should be here-->
-                        <td><a href="#"><i class="fa fa-trash-o" style="font-size:36px; color:red;"></i></a></td>
-                    </tr>
-                </tbody>
-            </table>
-            <div class="d-flex justify-content-between align-items-center">
-                <b><h5>Total price: $13.20</h5></b>
-    <!--        Ordering should be added here-->
-                <button type="button" class="btn btn-dark" data-toggle="collapse" data-target="#demo">PLACE ORDER</button>
-            </div>
-        </form>
-        <div id="demo" class="collapse">
-            <hr>
-            <p>Credit or debit card</p>
-            <form action="#" method="post">
-                {% csrf_token %}
-                <div class="d-flex justify-content-between align-items-center">
-                    <label for="id_card_number"></label>
-                    <input type="text" class="form-control mb-2 mr-sm-2" id="id_card_number" 
-                           placeholder="Card number" maxlength="16">
-                    <label for="id_card_term" class="mr-sm-2"></label>
-                    <input type="text" class="form-control mb-2 mr-sm-2" id="id_card_term" 
-                           placeholder="MM/YY" maxlength="5">
-                    <label for="id_cvc" class="mr-sm-2"></label>
-                    <input type="text" class="form-control mb-2 mr-sm-2" id="id_cvc" 
-                           placeholder="СVC" maxlength="3">
-                    <button type="submit" class="btn btn-danger mb-2">SUBMIT PAYMENT</button>
-                </div>
-            </form>
-        </div>        
-    </div>
+	<div class="shadow p-3 mb-5 bg-body rounded">
+		<p>
+			<h5>Your Cart</h5>
+		</p>
+		<p>
+			<h6>July 22, 2022, 3.59 a.m.</h6>
+		</p>
+		<!--        <p><img src="https://thumbs.dreamstime.com/b/shop-cart-icon-buy-symbol-shopping-basket-sign-%C3%A2%E2%82%AC-stock-143519011.jpg" style="height: 120px; width:20%; display: block;" class="card-img-top" alt="..."></p>--><i class="fa fa-shopping-cart" style="font-size:48px;"></i>
+		<hr>
+		<p><b><h5>Deliver to</h5></b>
+			<!--        Text field for address-->
+			<form action="" method="post"> {% csrf_token %}
+				<div class="col-auto"> <input type="text" id="address" class="form-control"> </div>
+		</p>
+		<hr>
+		<table class="table">
+			<!--            table of items-->
+			<thead>
+				<tr>
+					<th scope="col">Item name</th>
+					<th scope="col">Quantity</th>
+					<th scope="col">Price</th>
+					<th scope="col">Remove</th>
+				</tr>
+			</thead>
+			<tbody>
+				<!--    cycle 'for' with items should be here-->
+				<tr>
+					<td>Small Regular pizza</td>
+					<td>1</td>
+					<td>$13.20</td>
+					<!--        Ref for deleting items should be here-->
+					<td><a href="#"><i class="fa fa-trash-o" style="font-size:36px; color:red;"></i></a></td>
+				</tr>
+			</tbody>
+		</table> <b><h5>Total price: $13.20</h5></b>
+		<!--        Ordering should be added here--><a href="#" type="button" class="btn btn-dark">Place Order</a> </div>
+	</form>
 </div>
-
-{% endblock  %}
+</div> 
+{% endblock %}
