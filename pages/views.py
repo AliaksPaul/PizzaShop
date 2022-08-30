@@ -9,3 +9,6 @@ class PizzaListView(generics.ListAPIView):
 
     def get(self, request, *args, **kwargs):
         return Response(template_name="pages/main.html")
+
+def error_404(request, exception):
+    return render(request, '404.html')

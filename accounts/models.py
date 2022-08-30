@@ -4,8 +4,6 @@ from django.contrib.auth.models import AbstractBaseUser, PermissionsMixin
 from django.utils import timezone
 
 
-
-
 class CustomUserManager(BaseUserManager):
     """   
     Диспетчер пользовательских моделей пользователей, где электронная почта является уникальным идентификатором
@@ -58,8 +56,3 @@ class CustomUser(AbstractBaseUser, PermissionsMixin):
 
     def __str__(self):
         return self.email
-
-
-    
-    
- 
