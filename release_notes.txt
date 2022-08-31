@@ -1,1 +1,1 @@
-corrected 404 error
+fix registration layout

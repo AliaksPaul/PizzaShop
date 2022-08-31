@@ -1,8 +1,8 @@
 from django.contrib import admin
 from django.urls import path, include
-from .views import *
+from . import views
 
 urlpatterns = [
-    path('registration/', registration, name='registration'),
+    path('registration/', views.registration, name='registration'),
     path('email/', views.email, name="email"),
 ]
