@@ -3,8 +3,8 @@ from django.db import models
 
 class Pizza(models.Model):
     name = models.CharField(max_length=50)
-    medium_price = models.DecimalField(max_digits=10, decimal_places=2) 
-    large_price = models.DecimalField(max_digits=10, decimal_places=2) 
+    medium_price = models.DecimalField(decimal_places=2) 
+    large_price = models.DecimalField(decimal_places=2) 
 
     def __str__(self):
         return self.name
@@ -12,7 +12,7 @@ class Pizza(models.Model):
 
 class Salad(models.Model):
     name = models.CharField(max_length=50)
-    price = models.DecimalField(max_digits=10, decimal_places=2) 
+    price = models.DecimalField(decimal_places=2) 
 
     def __str__(self):
         return self.name
@@ -20,7 +20,7 @@ class Salad(models.Model):
 
 class Pasta(models.Model):
     name = models.CharField(max_length=50)
-    price = models.DecimalField(max_digits=10, decimal_places=2) 
+    price = models.DecimalField(decimal_places=2) 
 
     def __str__(self):
         return self.name
@@ -29,7 +29,7 @@ class Pasta(models.Model):
 class Garnier(models.Model):
     name = models.CharField(max_length=50)
     price = models.DecimalField(max_digits=10, decimal_places=2)
-    mass = models.IntegerField(max_length=5)
+    mass = models.IntegerField()
 
     def __str__(self):
         return self.name
@@ -37,7 +37,7 @@ class Garnier(models.Model):
 class Cocktail(models.Model):
     name = models.CharField(max_length=50)
     price = models.DecimalField(max_digits=10, decimal_places=2)
-    volume = models.IntegerField(max_length=5)
+    volume = models.IntegerField()
 
     def __str__(self):
         return self.name
@@ -45,7 +45,7 @@ class Cocktail(models.Model):
 class Drinks(models.Model):
     name = models.CharField(max_length=50)
     price = models.DecimalField(max_digits=10, decimal_places=2)
-    volume = models.IntegerField(max_length=5)
+    volume = models.IntegerField()
 
     def __str__(self):
         return self.name
@@ -53,7 +53,7 @@ class Drinks(models.Model):
 class Subs(models.Model):
     name = models.CharField(max_length=50)
     price = models.DecimalField(max_digits=10, decimal_places=2)
-    mass = models.IntegerField(max_length=5)
+    mass = models.IntegerField()
 
     def __str__(self):
         return self.name
