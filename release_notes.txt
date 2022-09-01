@@ -1,1 +1,1 @@
-Fix cart template structure and syntax.
+- fix registration layout
