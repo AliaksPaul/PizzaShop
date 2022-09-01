@@ -1,21 +1,28 @@
-from django.shortcuts import render
-from .forms import *
-from django.contrib.auth.models import User
+from rest_framework import generics
+from rest_framework.response import Response
+from rest_framework.renderers import TemplateHTMLRenderer
+from .models import CustomUser 
+# from .forms import UserRegistrationForm
 
 
-def registration(request):
-    """Function for registration"""
-    if request.method == 'POST':
-        user_form = UserRegistrationForm(request.POST)
-        if user_form.is_valid():
-            new_user = user_form.save(commit=False)
-            new_user.set_password(user_form.cleaned_data['password2'])
-            new_user.save()
-            return render(request, 'accounts/registration_complete.html')
-        return render(request, 'accounts/registration.html', {'user_form': user_form})
-    user_form = UserRegistrationForm()
-    return render(request, 'accounts/registration.html', {'user_form': user_form})
+class RegistrationListView(generics.ListAPIView):
+    renderer_classes = [TemplateHTMLRenderer]
 
-def email(request):
-    return render(request, 'accounts/email_layout.html')
+    def get(self, request, *args, **kwargs):
+        return Response(template_name="registration/registration.html")
 
+
+class ProfileListView(generics.ListAPIView):
+    renderer_classes = [TemplateHTMLRenderer]
+    
+    def get(self, request, *args, **kwargs):
+        return Response(template_name="registration/profile.html")
+
+
+class EmailListView(generics.ListAPIView):
+    queryset = CustomUser.objects.all()
+    renderer_classes = [TemplateHTMLRenderer]
+
+    def get(self, request, *args, **kwargs):
+        self.objects = self.get_queryset()
+        return Response({'emails' : self.objects}, template_name="accounts/email_layout.html")
