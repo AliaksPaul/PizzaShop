@@ -5,6 +5,7 @@ from django.utils import timezone
 
 
 class CustomUserManager(BaseUserManager):
+    use_in_migrations = True
     """   
     Диспетчер пользовательских моделей пользователей, где электронная почта является уникальным идентификатором
 
@@ -16,7 +17,7 @@ class CustomUserManager(BaseUserManager):
 
         """
         if not email:
-            raise ValueError(_('The Email must be set'))
+            raise ValueError('The Email must be set')
         email = self.normalize_email(email)
         user = self.model(email=email, **extra_fields)
         user.set_password(password)
@@ -56,8 +57,3 @@ class CustomUser(AbstractBaseUser, PermissionsMixin):
 
     def __str__(self):
         return self.email
-
-
-    
-    
- 
