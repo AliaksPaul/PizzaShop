@@ -16,7 +16,7 @@ class CustomUserManager(BaseUserManager):
 
         """
         if not email:
-            raise ValueError(('The Email must be set'))
+            raise ValueError(_('The Email must be set'))
         email = self.normalize_email(email)
         user = self.model(email=email, **extra_fields)
         user.set_password(password)
@@ -56,3 +56,8 @@ class CustomUser(AbstractBaseUser, PermissionsMixin):
 
     def __str__(self):
         return self.email
+
+
+    
+    
+ 

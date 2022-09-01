@@ -138,4 +138,4 @@ LOGIN_REDIRECT_URL = '/pages/'
 LOGOUT_REDIRECT_URL = '/pages/'
 EMAIL_BACKEND = 'django.core.mail.backends.console.EmailBackend'
 #
-# AUTH_USER_MODEL = 'accounts.CustomUser'
+AUTH_USER_MODEL = 'accounts.CustomUser'
