@@ -4,7 +4,7 @@ from django.contrib.auth.models import AbstractBaseUser, PermissionsMixin
 from django.utils import timezone
 
 
-class CustomUserManager(BaseUserManager):
+class UserManager(BaseUserManager):
     use_in_migrations = True
     """   
     Диспетчер пользовательских моделей пользователей, где электронная почта является уникальным идентификатором
@@ -40,7 +40,7 @@ class CustomUserManager(BaseUserManager):
         return self.create_user(email, password, **extra_fields)
 
 
-class CustomUser(AbstractBaseUser, PermissionsMixin):
+class User(AbstractBaseUser, PermissionsMixin):
     
     first_name = models.CharField(max_length=255)
     last_name = models.CharField(max_length=255)
@@ -53,7 +53,7 @@ class CustomUser(AbstractBaseUser, PermissionsMixin):
     USERNAME_FIELD = 'email'
     REQUIRED_FIELDS = []
 
-    objects = CustomUserManager()
+    objects = UserManager()
 
     def __str__(self):
         return self.email

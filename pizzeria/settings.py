@@ -26,7 +26,7 @@ BASE_DIR = Path(__file__).resolve().parent.parent
 SECRET_KEY = 'django-insecure-j@2bu)d(g+g%d&a($m803_351oc7ljng*r5y4^hmmxpa#b=351'
 
 # SECURITY WARNING: don't run with debug turned on in production!
-DEBUG = False
+DEBUG = True
 
 ALLOWED_HOSTS = ['0.0.0.0', 'localhost', '127.0.0.1', 'z24pizzashop.herokuapp.com']
 
@@ -89,12 +89,12 @@ db_from_env = dj_database_url.config(conn_max_age=600)
 
 DATABASES = {
     'default': {
-        'ENGINE': '#',
-        'NAME': '#',
-        'USER': '#',
-        'PASSWORD': '#',
-        'HOST': '#',
-        'PORT': '#'
+        'ENGINE': 'django.db.backends.postgresql_psycopg2',
+        'NAME': 'ddlhqm8bn1a860',
+        'USER': 'ctjwbuplsnxqas',
+        'PASSWORD': 'cdcce1bd38bc9e150bfc367c39f7b39c9f27761d81c57450910b01908ac8a8d3',
+        'HOST': 'ec2-44-195-132-31.compute-1.amazonaws.com',
+        'PORT': '5432'
     }
 }
 # DATABASES['default'].update(db_from_env)
@@ -147,4 +147,4 @@ LOGIN_REDIRECT_URL = '/pages/'
 LOGOUT_REDIRECT_URL = '/pages/'
 EMAIL_BACKEND = 'django.core.mail.backends.console.EmailBackend'
 #
-AUTH_USER_MODEL = 'accounts.CustomUser'
+AUTH_USER_MODEL = 'accounts.User'

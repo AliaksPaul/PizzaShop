@@ -1,15 +1,21 @@
 from rest_framework import generics
 from rest_framework.response import Response
 from rest_framework.renderers import TemplateHTMLRenderer
-from .models import CustomUser 
+from .models import User 
 # from .forms import UserRegistrationForm
 
 
-class RegistrationListView(generics.ListAPIView):
+class SignUpListView(generics.ListAPIView):
     renderer_classes = [TemplateHTMLRenderer]
 
     def get(self, request, *args, **kwargs):
-        return Response(template_name="registration/registration.html")
+        return Response(template_name="registration/signUp.html")
+
+class SignInListView(generics.ListAPIView):
+    renderer_classes = [TemplateHTMLRenderer]
+
+    def get(self, request, *args, **kwargs):
+        return Response(template_name="registration/signIn.html")
 
 
 class ProfileListView(generics.ListAPIView):
@@ -20,7 +26,7 @@ class ProfileListView(generics.ListAPIView):
 
 
 class EmailListView(generics.ListAPIView):
-    queryset = CustomUser.objects.all()
+    queryset = User.objects.all()
     renderer_classes = [TemplateHTMLRenderer]
 
     def get(self, request, *args, **kwargs):
