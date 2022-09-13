@@ -25,6 +25,10 @@ BASE_DIR = Path(__file__).resolve().parent.parent
 # SECURITY WARNING: keep the secret key used in production secret!
 SECRET_KEY = 'django-insecure-j@2bu)d(g+g%d&a($m803_351oc7ljng*r5y4^hmmxpa#b=351'
 
+SOCIAL_AUTH_FACEBOOK_KEY = "353271700258296"
+SOCIAL_AUTH_FACEBOOK_SECRET = "7d7590ea7c6a78671d028d7228755381"
+
+
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
@@ -48,7 +52,10 @@ INSTALLED_APPS = [
     'pages',
     # 'rest_framework',
     'api',
-    
+    'allauth',
+    'allauth.account',
+    'allauth.socialaccount',
+    'allauth.socialaccount.providers.facebook',
 ]
 
 MIDDLEWARE = [
@@ -78,6 +85,29 @@ TEMPLATES = [
         },
     },
 ]
+
+
+AUTHENTICATION_BACKENDS = [
+    'django.contrib.auth.backends.ModelBackend',
+    'allauth.account.auth_backends.AuthenticationBackend',   
+]
+
+SOCIALACCOUNT_PROVIDERS = {
+    'facebook': {
+        "METHOD": "oauth2",
+        "SCOPE": ['public_profile', 'email'],
+        "AUTH_PARAMS": {'auth_type': 'reauthenticate'},
+        "FIELDS": [
+            'email',
+            'name',
+            'first_name',
+            'last_name',
+            'updated_time'
+        ],
+        "VERIFIED_EMAIL": True
+    }
+}
+
 
 WSGI_APPLICATION = 'pizzeria.wsgi.application'
 
