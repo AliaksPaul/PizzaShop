@@ -27,6 +27,8 @@ SECRET_KEY = 'django-insecure-j@2bu)d(g+g%d&a($m803_351oc7ljng*r5y4^hmmxpa#b=351
 
 SOCIAL_AUTH_FACEBOOK_KEY = "353271700258296"
 SOCIAL_AUTH_FACEBOOK_SECRET = "7d7590ea7c6a78671d028d7228755381"
+SOCIAL_AUTH_GOOGLE_KEY = "89468135215-jdgaiatsgafkr2hr91o3heb1tgda5vas.apps.googleusercontent.com"
+SOCIAL_AUTH_GOOGLE_SECRET = "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"
 
 
 # SECURITY WARNING: don't run with debug turned on in production!
@@ -56,6 +58,7 @@ INSTALLED_APPS = [
     'allauth.account',
     'allauth.socialaccount',
     'allauth.socialaccount.providers.facebook',
+    'allauth.socialaccount.providers.google',
 ]
 
 MIDDLEWARE = [
@@ -103,6 +106,20 @@ SOCIALACCOUNT_PROVIDERS = {
             'first_name',
             'last_name',
             'updated_time'
+        ],
+        "VERIFIED_EMAIL": True
+    },
+    'google': {
+        "METHOD": "oauth2",
+        'SCOPE': [
+            'profile',
+            'email'
+        ],
+        "AUTH_PARAMS": {'auth_type': 'reauthenticate'},
+        "FIELDS": [
+            'email',
+            'first_name',
+            'last_name'
         ],
         "VERIFIED_EMAIL": True
     }
@@ -173,8 +190,8 @@ STATIC_ROOT = BASE_DIR / 'static'
 # https://docs.djangoproject.com/en/4.0/ref/settings/#default-auto-field
 
 DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
-LOGIN_REDIRECT_URL = '/pages/'
-LOGOUT_REDIRECT_URL = '/pages/'
+LOGIN_REDIRECT_URL = '/'
+LOGOUT_REDIRECT_URL = '/'
 EMAIL_BACKEND = 'django.core.mail.backends.console.EmailBackend'
 #
 AUTH_USER_MODEL = 'accounts.User'
