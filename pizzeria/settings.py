@@ -102,7 +102,6 @@ SOCIALACCOUNT_PROVIDERS = {
         "AUTH_PARAMS": {'auth_type': 'reauthenticate'},
         "FIELDS": [
             'email',
-            'name',
             'first_name',
             'last_name',
             'updated_time'
@@ -195,3 +194,7 @@ LOGOUT_REDIRECT_URL = '/'
 EMAIL_BACKEND = 'django.core.mail.backends.console.EmailBackend'
 #
 AUTH_USER_MODEL = 'accounts.User'
+ACCOUNT_USER_MODEL_USERNAME_FIELD = None
+ACCOUNT_EMAIL_REQUIRED = True
+ACCOUNT_USERNAME_REQUIRED = False
+ACCOUNT_AUTHENTICATION_METHOD = 'email'
