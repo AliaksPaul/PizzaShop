@@ -17,3 +17,10 @@ class UserRegistrationForm(forms.ModelForm):
         if data['password'] != data['password2']:
             raise forms.ValidationError("Passwords didn't match!")
         return data['password2']
+
+
+class UserLoginForm(forms.Form):
+    email = forms.CharField()
+    password = forms.CharField(widget=forms.PasswordInput)
+
+
