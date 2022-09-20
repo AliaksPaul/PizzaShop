@@ -47,7 +47,7 @@
             <a class="nav-link" href="{% url 'main' %}">HOME</a>
           </li>
           <li class="nav-item">
-            <a class="nav-link" href="{% url 'order_place' %}">ORDER</a>
+            <a class="nav-link" href="{% url 'orders' %}">ORDER</a>
           </li>
         </ul>
 
@@ -56,8 +56,8 @@
           <span class="font-weight-light text-muted">Logged as {{user.email}}</span>
           <a href="{% url 'logout'%}" role="button" class="btn font-weight-light text-muted"><i class="fa-solid fa-right-to-bracket"></i> LOGOUT</a>
         {% else %}
-          <a href="{% url 'sign_up'%}" role="button" class="btn font-weight-light text-muted"><i class="fa-solid fa-user"></i> SIGN UP</a>
-          <a href="{% url 'sign_in'%}" role="button" class="btn font-weight-light text-muted"><i class="fa-solid fa-right-to-bracket"></i> LOG IN</a>
+          <a href="{% url 'signup'%}" role="button" class="btn font-weight-light text-muted"><i class="fa-solid fa-user"></i> SIGN UP</a>
+          <a href="{% url 'signin'%}" role="button" class="btn font-weight-light text-muted"><i class="fa-solid fa-right-to-bracket"></i> LOG IN</a>
         {% endif %}
 
       </div>
