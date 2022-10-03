@@ -52,7 +52,7 @@
         </ul>
 
         {% if user.is_authenticated %}
-          <a href="{% url 'cart' %}" role="button" class="btn font-weight-light text-muted">CART(0)</a>
+          <a href="{% url 'cart' %}" role="button" class="btn font-weight-light text-muted">CART({{cart}})</a>
           <span class="font-weight-light text-muted">Logged as {{user.email}}</span>
           <a href="{% url 'logout'%}" role="button" class="btn font-weight-light text-muted"><i class="fa-solid fa-right-to-bracket"></i> LOGOUT</a>
         {% else %}

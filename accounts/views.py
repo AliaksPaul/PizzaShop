@@ -6,21 +6,31 @@ from .forms import UserLoginForm
 from django.contrib.auth import authenticate, login
 from django.http import HttpResponse
 from django.shortcuts import render, redirect
-# from .forms import UserRegistrationForm
+from orders.models import Order
 
 
 class SignUpListView(generics.ListAPIView):
     renderer_classes = [TemplateHTMLRenderer]
 
     def get(self, request, *args, **kwargs):
-        return Response(template_name="accounts/registration.html")
+        query = Order.objects.get_or_create(customer=request.user)
+        order = query[0]
+        context = {
+            'cart': order.getItemsCount()
+        }
+        return Response(data=context, template_name="accounts/registration.html")
 
 
 class SignInListView(generics.ListAPIView):
     renderer_classes = [TemplateHTMLRenderer]
 
     def get(self, request, *args, **kwargs):
-        return Response(template_name="accounts/login.html")
+        query = Order.objects.get_or_create(customer=request.user)
+        order = query[0]
+        context = {
+            'cart': order.getItemsCount()
+        }
+        return Response(data=context, template_name="accounts/login.html")
 
     def post(self, request, *args, **kwargs):
         form = UserLoginForm(request.POST)
@@ -40,7 +50,12 @@ class ProfileListView(generics.ListAPIView):
     renderer_classes = [TemplateHTMLRenderer]
     
     def get(self, request, *args, **kwargs):
-        return Response(template_name="registration/profile.html")
+        query = Order.objects.get_or_create(customer=request.user)
+        order = query[0]
+        context = {
+            'cart': order.getItemsCount()
+        }
+        return Response(data=context, template_name="registration/profile.html")
 
 
 class EmailListView(generics.ListAPIView):
@@ -49,4 +64,10 @@ class EmailListView(generics.ListAPIView):
 
     def get(self, request, *args, **kwargs):
         self.objects = self.get_queryset()
-        return Response({'emails' : self.objects}, template_name="accounts/email_layout.html")
+        query = Order.objects.get_or_create(customer=request.user)
+        order = query[0]
+        context = {
+            'emails' : self.objects,
+            'cart': order.getItemsCount()
+        }
+        return Response(data=context, template_name="accounts/email_layout.html")
